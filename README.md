@@ -26,6 +26,13 @@ We can take the file “GO_RS_R” as an example to have a quick view of the GO 
 To take the file “KEGG_RS” as an example to go through the KEGG analysis results. It can be found that it looked similar as GO results, which has the same 11 columns as the previous file.  
 Strictly speaking, the q-value and the FDR adjusted p-value are similar but not quite the same. However, the terms q-value and FDR adjusted p-value are often used generically by the Bioconductor community to refer to any quantity that controls or estimates any definition of the FDR.  In this general sense the terms are synonyms [6].
 
+Results summary:
+For the GO analysis, we found 399 GO terms for the condition comparison between Ring and Schizont, 395 GO terms for the condition comparison between Ring and Troph, and 398 GO terms for the condition comparison between Troph and Schizont. They are all listed in ascending order according to the value of p.adjust (or q-value).
+
+For the KEGG analysis, we found 36 KEGG pathways for the condition comparison between Ring and Schizont, 36 KEGG pathways for the condition comparison between Ring and Troph, and also 36 KEGG pathways for the condition comparisons between Troph and Schizont. Same as Go analysis results, they are all listed in ascending order according to the p. adjust value (or q-value) as well. 
+
+We can set the cutoff criteria based on the p-value or p.adjust value such as 0.05 to filter the significant results. Usually, people prefer to use p. adjust value rather than q-value. After we filtered out the significant results or the results that we are interested in, there is a new malaria bioinformatics tool kit https://malaria.sbs.ntu.edu.sg/ where allow us to input the specific GO ID or gene ID to view and compare more expression profiles within and across species, and also to investigate the phylogenetic and expression relationships of gene families [8]. 
+
 References:
 [1]. https://www.bioconductor.org/packages//2.10/bioc/html/clusterProfiler.html
 [2]. https://yulab-smu.github.io/clusterProfiler-book/chapter5.html
@@ -34,5 +41,6 @@ References:
 [5]. https://www.biostars.org/p/128931/
 [6]. https://stat.ethz.ch/pipermail/bioconductor/2012-December/049902.html
 [7]. https://www.gsea-msigdb.org/gsea/doc/GSEAUserGuideFrame.html
+[8]. https://academic.oup.com/nar/article/48/D1/D768/5542875
 
 
